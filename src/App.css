@@ -1,0 +1,146 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}
+
+.status {
+    color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  max-width: 270px;
+}
+
+.board-row {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .board {
+    max-width: 100%;
+  }
+
+  .status {
+    margin-top: 50px;
+    font-size: 18px;
+  }
+}
+
+.reset-button {
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.reset-button button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease
+}
+
+.reset-button button:hover {
+  background-color: #45a049; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reset-button {
+  margin-bottom: 10px;
+}
+
+.history-button {
+  margin-top: 10px;
+}
+
+.history-button button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.history-button button:hover {
+  background-color: #45a049;
+}
+
+.game-info {
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+
+}
+.game-info ol {
+  max-height: 300px;
+  overflow-y: auto; 
+  list-style-type: none;
+  text-align: center;
+  padding: 0; 
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.game-info ol li {
+  margin: 5px;
+}
+
+.game-info ol li button {
+  color: white;
+  background-color: #0173b9;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-info ol li button:hover {
+  background-color: #3e8345;
+}
